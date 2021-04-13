@@ -18,9 +18,10 @@ message("CPM_SOURCE_CACHE=${CPM_SOURCE_CACHE}")
 if ( NOT DEFINED CMAKE_BUILD_TYPE )
   set( CMAKE_BUILD_TYPE Release CACHE STRING "Build type" )
 endif ()
-
+#CPMAddPackage(NAME glwf URL "https://github.com/glfw/glfw/archive/refs/heads/master.zip")
+#CPMAddPackage(NAME glm URL "https://github.com/g-truc/glm/archive/refs/heads/master.zip")
 CPMAddPackage("gh:glfw/glfw#master")
-CPMAddPackage("gh:g-truc/glm")
+CPMAddPackage("gh:g-truc/glm#master")
 set(CMAKE_DEBUG_POSTFIX d)
 
 add_subdirectory(glew)
